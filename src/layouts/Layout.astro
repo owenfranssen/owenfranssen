@@ -1,4 +1,6 @@
 ---
+import Analytics from "@components/analytics.astro";
+import GoogleAnalytics from "@components/analytics/google.astro";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
 import "@fontsource/inter/variable.css";
@@ -17,14 +19,16 @@ const { title, desc, ogimage = "/opengraph.jpg" } = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
-const makeTitle = title
-  ? title + " | " + "Stablo"
-  : "Stablo — Free Blog Website Template built with Astro & MDX";
+const siteTitle = "OwenF.dev - Inspire by example",
+  makeTitle = title
+    ? title + " | " + "OwenF.dev"
+    : siteTitle;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <GoogleAnalytics />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -32,18 +36,18 @@ const makeTitle = title
     <SEO
       title={makeTitle}
       description={desc ||
-        "Stablo is a Blog Starter Template built with Astro & MDX."}
+        "OwenF.dev sharing developer code tips and career insights"}
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
+      <!-- twitter={{
+        creator: "@owenfranssen",
         site: "@web3templates",
         card: "summary_large_image",
-      }}
+      }} -->
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Stablo - Blog Starter Template for Astro`,
+          title: siteTitle,
           image: resolvedOGImage,
         },
         image: {
@@ -56,6 +60,7 @@ const makeTitle = title
     <Navbar />
     <slot />
     <Footer />
+    <Analytics />
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */

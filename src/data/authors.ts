@@ -26,4 +26,10 @@ export const authors: Props[] = [
     image: "./src/assets/authors/erika.webp",
     bio: "Erika Oliver is a successful entrepreuner. She is the founder of Acme Inc, a bootstrapped business that builds affordable SaaS tools for local news, indie publishers, and other small businesses.",
   },
+  {
+    name: "Owen Franssen",
+    slug: "owen-franssen",
+    image: "./src/assets/authors/owen.webp",
+    bio: "Owen is a self-taught full-stack web developer having worked as a junior, senior and freelance developer over the past two decades  and is currently technical lead at a leading ecommerce agency in Ireland.",
+  },
 ];

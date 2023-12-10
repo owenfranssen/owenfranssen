@@ -1,36 +1,41 @@
 ---
 import Container from "./container.astro";
 import Themeswitch from "./themeswitch.astro";
+import EmailSignup from "./email-signup.astro";
 ---
 
 <Container class="mt-10 border-t border-gray-100 dark:border-gray-800">
+  <EmailSignup />
   <footer class="flex flex-col items-center">
     <div class="text-sm text-center">
-      Copyright © {new Date().getFullYear()} Stablo. All rights reserved.
+      Copyright © {new Date().getFullYear()} Owen Franssen. All rights reserved.
     </div>
     <div
       class="flex justify-center gap-1 mt-1 text-sm text-center text-gray-500 dark:text-gray-600">
       <span>
-        Made by{" "}
         <a
-          href="https://web3templates.com/?ref=stablo-astro"
+          href="https://github.com/owenfranssen"
           rel="noopener"
           target="_blank">
-          Web3Templates
+          Github
         </a>
-        <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
       </span>
       <span>&middot;</span>
       <span>
         <a
-          href="https://github.com/web3templates/stablo-astro"
+          href="https://instagram.com/owenf.dev"
           rel="noopener"
           target="_blank">
-          Github
+          Instagram
+        </a>
+      </span>
+      <span>&middot;</span>
+      <span>
+        <a
+          href="https://linkedin.com/in/owenfranssen"
+          rel="noopener"
+          target="_blank">
+          LinkedIn
         </a>
       </span>
     </div>
